@@ -131,9 +131,9 @@ export default function Hero() {
           {/* <button className="px-8 py-3 bg-gradient-to-r from-primary to-secondary text-foreground rounded-lg font-semibold hover:shadow-lg hover:shadow-primary/50 transition-all duration-300 hover:scale-105"> */}
           {/*   Ver Mi Trabajo */}
           {/* </button> */}
-          <button className="px-8 py-3 border-2 border-accent text-accent rounded-lg font-semibold hover:bg-accent/10 transition-all duration-300 hover:scale-105">
+          <a href="/cv-3.1.pdf" download="cv.pdf" className="px-8 py-3 border-2 border-accent text-accent rounded-lg font-semibold hover:bg-accent/10 transition-all duration-300 hover:scale-105">
             Descargar CV
-          </button>
+          </a>
         </div>
 
         <div className="flex justify-center gap-6 text-muted-foreground flex-wrap">
