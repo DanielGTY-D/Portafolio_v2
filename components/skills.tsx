@@ -5,19 +5,19 @@ import { useEffect, useRef, useState } from "react"
 const skillCategories = [
   {
     title: "Frontend",
-    skills: ["HTML5", "CSS3", "Tailwind CSS", "JavaScript", "React", "TypeScript"],
+    skills: ["HTML5", "CSS3", "Tailwind CSS", "JavaScript", "React", "TypeScript", "Astro", "React-router"],
     color: "from-blue-400 via-cyan-400 to-teal-400",
     bgColor: "bg-gradient-to-br from-blue-500/10 to-cyan-500/10",
   },
   {
-    title: "Backend",
+    title: "Backend (En proceso)",
     skills: ["Node.js", "Express", "C#", ".NET", "RESTful APIs", "SQL"],
     color: "from-purple-400 via-pink-400 to-red-400",
     bgColor: "bg-gradient-to-br from-purple-500/10 to-pink-500/10",
   },
   {
     title: "Tools & Más",
-    skills: ["Git", "Docker", "Vercel", "AWS", "MongoDB", "PostgreSQL"],
+    skills: ["Git", "Vercel", "MongoDB", "PostgreSQL"],
     color: "from-amber-400 via-orange-400 to-red-400",
     bgColor: "bg-gradient-to-br from-amber-500/10 to-orange-500/10",
   },
@@ -66,13 +66,11 @@ export default function Skills() {
           {skillCategories.map((category, idx) => (
             <div
               key={idx}
-              className={`group relative p-8 border-2 border-transparent rounded-xl transition-all duration-300 cursor-pointer overflow-hidden ${
-                category.bgColor
-              } ${
-                hoveredCard === idx
+              className={`group relative p-8 border-2 border-transparent rounded-xl transition-all duration-300 cursor-pointer overflow-hidden ${category.bgColor
+                } ${hoveredCard === idx
                   ? "border-primary shadow-2xl shadow-primary/30 scale-105"
                   : "border-border hover:border-primary/50"
-              } ${visibleCards[idx] ? "animate-fade-in-up" : ""}`}
+                } ${visibleCards[idx] ? "animate-fade-in-up" : ""}`}
               style={{ animationDelay: `${idx * 0.15}s` }}
               onMouseEnter={() => setHoveredCard(idx)}
               onMouseLeave={() => setHoveredCard(null)}
@@ -91,11 +89,10 @@ export default function Skills() {
                 {category.skills.map((skill) => (
                   <span
                     key={skill}
-                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 cursor-pointer ${
-                      hoveredCard === idx
-                        ? "bg-gradient-to-r from-primary/30 to-secondary/30 text-primary border border-primary/50"
-                        : "bg-muted text-muted-foreground border border-transparent"
-                    } hover:scale-110`}
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 cursor-pointer ${hoveredCard === idx
+                      ? "bg-gradient-to-r from-primary/30 to-secondary/30 text-primary border border-primary/50"
+                      : "bg-muted text-muted-foreground border border-transparent"
+                      } hover:scale-110`}
                   >
                     {skill}
                   </span>

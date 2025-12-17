@@ -41,73 +41,72 @@ export default function Contact() {
           </p>
         </div>
 
-        <form
-          onSubmit={handleSubmit}
-          className="space-y-6 bg-gradient-to-br from-card/50 to-background/50 border-2 border-primary/30 rounded-xl p-8 backdrop-blur-sm hover:border-primary/60 transition-all duration-300"
-        >
-          <div>
-            <label className="block text-foreground font-semibold mb-2">Nombre</label>
-            <input
-              type="text"
-              required
-              value={formData.name}
-              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              className="w-full px-4 py-3 bg-input border-2 border-border rounded-lg text-foreground placeholder-muted-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
-              placeholder="Tu nombre"
-            />
-          </div>
+        {/* <form */}
+        {/*   onSubmit={handleSubmit} */}
+        {/*   className="space-y-6 bg-gradient-to-br from-card/50 to-background/50 border-2 border-primary/30 rounded-xl p-8 backdrop-blur-sm hover:border-primary/60 transition-all duration-300" */}
+        {/* > */}
+        {/*   <div> */}
+        {/*     <label className="block text-foreground font-semibold mb-2">Nombre</label> */}
+        {/*     <input */}
+        {/*       type="text" */}
+        {/*       required */}
+        {/*       value={formData.name} */}
+        {/*       onChange={(e) => setFormData({ ...formData, name: e.target.value })} */}
+        {/*       className="w-full px-4 py-3 bg-input border-2 border-border rounded-lg text-foreground placeholder-muted-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all" */}
+        {/*       placeholder="Tu nombre" */}
+        {/*     /> */}
+        {/*   </div> */}
+        {/**/}
+        {/*   <div> */}
+        {/*     <label className="block text-foreground font-semibold mb-2">Email</label> */}
+        {/*     <input */}
+        {/*       type="email" */}
+        {/*       required */}
+        {/*       value={formData.email} */}
+        {/*       onChange={(e) => setFormData({ ...formData, email: e.target.value })} */}
+        {/*       className="w-full px-4 py-3 bg-input border-2 border-border rounded-lg text-foreground placeholder-muted-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all" */}
+        {/*       placeholder="tu@email.com" */}
+        {/*     /> */}
+        {/*   </div> */}
+        {/**/}
+        {/*   <div> */}
+        {/*     <label className="block text-foreground font-semibold mb-2">Mensaje</label> */}
+        {/*     <textarea */}
+        {/*       required */}
+        {/*       rows={5} */}
+        {/*       value={formData.message} */}
+        {/*       onChange={(e) => setFormData({ ...formData, message: e.target.value })} */}
+        {/*       className="w-full px-4 py-3 bg-input border-2 border-border rounded-lg text-foreground placeholder-muted-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all resize-none" */}
+        {/*       placeholder="Cuéntame sobre tu proyecto..." */}
+        {/*     /> */}
+        {/*   </div> */}
+        {/**/}
+        {/*   <button */}
+        {/*     type="submit" */}
+        {/*     className="w-full px-6 py-3 bg-gradient-to-r from-primary via-secondary to-accent text-foreground rounded-lg font-semibold hover:shadow-lg hover:shadow-primary/50 transition-all duration-300 hover:scale-105" */}
+        {/*   > */}
+        {/*     {submitted ? "✓ Mensaje Enviado!" : "Enviar Mensaje"} */}
+        {/*   </button> */}
+        {/**/}
+        {/*   {submitted && ( */}
+        {/*     <p className="text-center text-accent text-sm animate-fade-in-up"> */}
+        {/*       ¡Gracias por contactarme! Te responderé pronto. */}
+        {/*     </p> */}
+        {/*   )} */}
+        {/* </form> */}
 
-          <div>
-            <label className="block text-foreground font-semibold mb-2">Email</label>
-            <input
-              type="email"
-              required
-              value={formData.email}
-              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              className="w-full px-4 py-3 bg-input border-2 border-border rounded-lg text-foreground placeholder-muted-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
-              placeholder="tu@email.com"
-            />
-          </div>
-
-          <div>
-            <label className="block text-foreground font-semibold mb-2">Mensaje</label>
-            <textarea
-              required
-              rows={5}
-              value={formData.message}
-              onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              className="w-full px-4 py-3 bg-input border-2 border-border rounded-lg text-foreground placeholder-muted-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all resize-none"
-              placeholder="Cuéntame sobre tu proyecto..."
-            />
-          </div>
-
-          <button
-            type="submit"
-            className="w-full px-6 py-3 bg-gradient-to-r from-primary via-secondary to-accent text-foreground rounded-lg font-semibold hover:shadow-lg hover:shadow-primary/50 transition-all duration-300 hover:scale-105"
-          >
-            {submitted ? "✓ Mensaje Enviado!" : "Enviar Mensaje"}
-          </button>
-
-          {submitted && (
-            <p className="text-center text-accent text-sm animate-fade-in-up">
-              ¡Gracias por contactarme! Te responderé pronto.
-            </p>
-          )}
-        </form>
-
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 text-center">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-12 text-center">
           {[
-            { label: "Email", value: "hello@example.com" },
-            { label: "Teléfono", value: "+1 (555) 123-4567" },
-            { label: "Ubicación", value: "Tu Ciudad" },
-            { label: "Zona Horaria", value: "UTC -5" },
+            { label: "Email", value: "yaelgtorres25@gmail.com" },
+            { label: "Teléfono", value: "5561711577" },
+            { label: "Ubicación", value: "CDMX" },
           ].map((item, idx) => (
             <div
               key={idx}
               className="p-4 rounded-lg bg-card/50 border border-border hover:border-primary/50 transition-all duration-300 hover:scale-105"
             >
               <p className="text-muted-foreground text-sm mb-1">{item.label}</p>
-              <p className="text-foreground font-semibold">{item.value}</p>
+              <p className="text-foreground font-semibold text-wrap">{item.value}</p>
             </div>
           ))}
         </div>

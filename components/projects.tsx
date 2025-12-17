@@ -5,15 +5,15 @@ import Image from "next/image"
 
 const projects = [
   {
-    title: "E-Commerce Platform",
+    title: "AnimeVerse",
     description:
-      "Plataforma e-commerce full-stack con React, Node.js y MongoDB. Incluye filtrado de productos, carrito de compras e integración de pagos.",
-    tags: ["React", "Node.js", "MongoDB", "Stripe"],
-    image: "/ecommerce-platform.jpg",
-    link: "#",
+      "Plataforma para poder buscar animes ya con tiempo, recien salidos o los estrenos que se vienen en proximas temporadas",
+    tags: ["React", "React-router", "tanstack-query", "Zustand", "Zod"],
+    image: "/01.png",
+    link: "https://animeversee.netlify.app/",
   },
   {
-    title: "Task Management App",
+    title: "Task Management App (En proceso)",
     description:
       "Aplicación de gestión de tareas en tiempo real construida con React y Firebase. Incluye funcionalidad drag-and-drop y colaboración.",
     tags: ["React", "Firebase", "Tailwind CSS", "TypeScript"],
@@ -21,7 +21,7 @@ const projects = [
     link: "#",
   },
   {
-    title: "API Analytics Dashboard",
+    title: "API Analytics Dashboard (En proceso)",
     description:
       "Dashboard de analítica para monitorear rendimiento de API. Construido con C#, .NET y React con visualización de datos en tiempo real.",
     tags: ["C#", ".NET", "React", "WebSockets"],
@@ -29,7 +29,7 @@ const projects = [
     link: "#",
   },
   {
-    title: "Social Media Feed",
+    title: "Social Media Feed (En proceso)",
     description:
       "Feed de redes sociales dinámico con scroll infinito, notificaciones en tiempo real e interacciones de usuarios.",
     tags: ["React", "Node.js", "PostgreSQL", "Socket.io"],
@@ -37,19 +37,11 @@ const projects = [
     link: "#",
   },
   {
-    title: "Weather App",
+    title: "Weather App (En proceso)",
     description:
       "Aplicación de clima hermosa con geolocalización, datos de pronóstico y mapas interactivos. Diseño responsivo.",
     tags: ["React", "Tailwind CSS", "API Integration", "Responsive"],
     image: "/weather-app-interface.png",
-    link: "#",
-  },
-  {
-    title: "Portfolio Website",
-    description:
-      "Sitio web de portafolio moderno que muestra proyectos y habilidades. Caracterizado por animaciones suaves y rendimiento optimizado.",
-    tags: ["Next.js", "React", "Tailwind CSS", "Vercel"],
-    image: "/portfolio-website.jpg",
     link: "#",
   },
 ]
@@ -85,7 +77,7 @@ export default function Projects() {
 
               <div className="relative overflow-hidden h-48 bg-muted">
                 <Image
-                  src={project.image || "/placeholder.svg"}
+                  src={project.image}
                   alt={project.title}
                   width={500}
                   height={300}

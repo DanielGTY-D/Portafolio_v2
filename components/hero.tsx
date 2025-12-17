@@ -97,6 +97,13 @@ export default function Hero() {
     return () => window.removeEventListener("resize", handleResize)
   }, [])
 
+
+  const socialNetworks = [
+    {
+      social: "Github",
+      link: "https://github.com/DanielGTY-D"
+    },
+  ]
   return (
     <section id="about" className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
       <canvas ref={canvasRef} className="absolute inset-0 w-full h-full" />
@@ -121,24 +128,25 @@ export default function Hero() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <button className="px-8 py-3 bg-gradient-to-r from-primary to-secondary text-foreground rounded-lg font-semibold hover:shadow-lg hover:shadow-primary/50 transition-all duration-300 hover:scale-105">
-            Ver Mi Trabajo
-          </button>
+          {/* <button className="px-8 py-3 bg-gradient-to-r from-primary to-secondary text-foreground rounded-lg font-semibold hover:shadow-lg hover:shadow-primary/50 transition-all duration-300 hover:scale-105"> */}
+          {/*   Ver Mi Trabajo */}
+          {/* </button> */}
           <button className="px-8 py-3 border-2 border-accent text-accent rounded-lg font-semibold hover:bg-accent/10 transition-all duration-300 hover:scale-105">
             Descargar CV
           </button>
         </div>
 
         <div className="flex justify-center gap-6 text-muted-foreground flex-wrap">
-          {["GitHub", "LinkedIn", "Twitter"].map((social) => (
-            <a
-              key={social}
-              href="#"
-              className="hover:text-primary transition-all duration-300 text-sm font-medium hover:scale-110"
-            >
-              {social}
-            </a>
-          ))}
+          {
+            socialNetworks.map((social) => (
+              <a
+                key={social.social}
+                href={social.link}
+                className="hover:text-primary transition-all duration-300 text-sm font-medium hover:scale-110"
+              >
+                {social.social}
+              </a>
+            ))}
         </div>
       </div>
 
