@@ -13,12 +13,12 @@ const projects = [
     link: "https://animeversee.netlify.app/",
   },
   {
-    title: "Task Management App (En proceso)",
+    title: "AbsoluteMovies",
     description:
-      "Aplicación de gestión de tareas en tiempo real construida con React y Firebase. Incluye funcionalidad drag-and-drop y colaboración.",
-    tags: ["React", "Firebase", "Tailwind CSS", "TypeScript"],
+      "Aplicacion de servicio de peliculas, con integracion de inicio de sesion con MongoDb",
+    tags: ["React", "MongoDb", "Tailwind CSS", "TypeScript", "Express", "Mongoose"],
     image: "/task-management-app.jpg",
-    link: "#",
+    link: "https://absolutemovies.netlify.app/",
   },
   {
     title: "API Analytics Dashboard (En proceso)",
